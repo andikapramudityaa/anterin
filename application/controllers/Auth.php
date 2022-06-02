@@ -6,8 +6,7 @@ class Auth extends CI_Controller
         parent::__construct();
         $this->load->model("AdminModel");
 
-        if($this->session->userdata("login") == null)
-        {
+        if ($this->session->userdata("login") == null) {
             redirect(base_url('adm-login'));
         }
 
@@ -26,18 +25,17 @@ class Auth extends CI_Controller
                 redirect(base_url('admin'));
             } else {
                 echo "
-                <script>
-                alert('Password salah');
-                document.location.href = 'adm-login';
-                </script>";
+                    <script>
+                    alert('Password salah');
+                    document.location.href = 'adm-login';
+                    </script>";
             }
         } else {
             echo "
-            <script>
-            alert('Isikan Username yang sudah terdaftar! Jika belum
-            punya akun, silahkan hubungi admin');
-            document.location.href = 'adm-login';
-            </script>";
+                <script>
+                alert('ID Tidak Terdaftar dalam Database');
+                document.location.href = 'adm-login';
+                </script>";
         }
     }
 
