@@ -1,6 +1,5 @@
 body {
   background: #f1f2f6;
-  /* background: linear-gradient(to left, #e58e26, #fad390, #e58e26); */
 }
 
 .d-flex input {
@@ -72,53 +71,30 @@ nav{
   width: 100%;
 }
 
-a{
+a, a:hover{
   color: #ffbe76;
-    font-size: 40px;
-    line-height: 50px;
-    padding: 3rem;
-    font-weight: bold;
+  font-size: 14px;
 }
 
-nav ul{
-  float: right;
-  margin-right: 20px;
-}
 nav ul li{
   display: inline-block;
-  line-height: 80px;
+  line-height: 40px;
   margin: 0 5px;
 }
+
 nav ul li a{
   color: #ffbe76;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
-  text-transform: uppercase;
 }
 
 nav ul li a .nav-link{
   background: #f1f2f6;
+  font-size: 22px;
 }
 
-/* messages */
-.updatemsg,
-.deletemsg,
-.insertmsg {
-  position: absolute;
-  top: -40px;
-}
-
-.movedown {
-  animation: slideup 3.5s ease;
-}
-
-@keyframes slideup {
-  50% {
-      top: 0
-  }
-
-  100% {
-      top: -40px;
-  }
+table {
+  text-align: center;
+  border: 1px solid;
 }

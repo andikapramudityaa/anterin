@@ -13,10 +13,8 @@
 <body>
 
   <nav>
-    <label class="logo">
-      Anterin
-      <!-- <img class="img-fluid" src="assets/image/logo_AnterIN.png" alt=""> -->
-    </label>
+    <label class="logo">アンテリン</label>
+
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#home">Cek Resi</a></li>
