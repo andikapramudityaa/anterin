@@ -1,0 +1,19 @@
+body {
+  background: #ffbe76;
+  background: linear-gradient(to left, #e58e26, #fad390, #e58e26);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #ffbe76;
+  border: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 1rem 1.3rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: none;
+}
+
+div.row {
+  padding: 1rem;
+  padding-top: none;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styleAdmin.css">
+    <link href="image/logo_AnterIN_3.png" rel="anterin-icon" type="image/png">
+    <title>Anterin - Admin</title>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="image/logo_AnterIN_2.png"
+            height="35"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+    <div class="container mt-4">
+        <!-- <div class="box">
+            <div class="user_log">
+                <a href="#" class="profile">
+                    <img src="image/icons8_user_male_circle_480px_1.png" alt="picture">
+                </a>
+            </div>
+            <div class="drop_box">
+                <ul>
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </div>
+        </div> -->
+        <!--Form-->
+        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+            <div>
+                <img class="img-fluid" src="image/logo_AnterIN.png" alt="anterin">
+            </div>
+            <div class="container-md card border-3 shadow rounded-3 my-9">
+            <div class="form-group">
+                <label>No. Resi</label>
+                <input type="text" name="resi" id="resi" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Paket</label>
+                <input type="text" name="paket" id="paket" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Alamat</label>
+                <input type="text" name="alamat" id="alamat" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Penerima</label>
+                <input type="text" name="penerima" id="penerima" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Keterangan</label>
+                <input type="text" name="ket" id="ket" class="form-control">
+            </div>
+            <div>
+                <input type="submit" value="Add paket" class="btn btn-warning btn-block">
+            </div>
+        </form>
+        <!--List-->
+        <table class="table table-striped mt-4" id="fruit-list">
+            <thead>
+                <tr>
+                    <th>No. Resi</th>
+                    <th>Paket</th>
+                    <th>Alamat</th>
+                    <th>Penerima</th>
+                    <th>Keterangan</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</div>
+<footer>
+    <label class="copywrite">
+      Anterin &copy;2022
+    </label>
+  </footer>
+</body>
+</html>

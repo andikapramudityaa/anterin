@@ -1,0 +1,64 @@
+.konten {
+  padding-top: 80px;
+}
+.profil {
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  display: grid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.subtitle {
+  font-size: 32px;
+  text-decoration: underline;
+  color: #ffbe76;
+  margin: 10px;
+}
+.kiri {
+  background-color: rgb(240, 195, 112);
+  border-color: lightyellow;
+  border-style: double;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+.kiri img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 240px;
+  width: 320px;
+  border-style: double;
+  border: 2px solid white;
+}
+
+.kiri h3 {
+  text-align: center;
+  color: white;
+}
+.kanan {
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  background-color: rgb(240, 195, 112);
+  border-color: lightyellow;
+  border-style: double;
+  border-radius: 10px;
+  font-family: Arial;
+}
+tr {
+  font-size: 26px;
+  margin: 10px;
+  color: aliceblue;
+}
+
+.kanan .satu {
+  width: 200px;
+}
+
+.kanan .batas {
+  padding: 0px 10px;
+}
+
+.kanan .dua {
+  width: 500px;
+}

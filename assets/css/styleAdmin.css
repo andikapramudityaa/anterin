@@ -1,0 +1,124 @@
+body {
+  background: #f1f2f6;
+  /* background: linear-gradient(to left, #e58e26, #fad390, #e58e26); */
+}
+
+.d-flex input {
+  margin: .13em 0em;
+}
+
+.d-flex button {
+  margin: 1.9em .7em;
+  padding: .4em 2.6em;
+}
+
+.d-flex table {
+  margin: 2em 13em;
+}
+
+div .form-group{
+  margin: 0.95rem;
+}
+
+div .img-fluid{
+  padding: 5px;
+  padding-bottom: 2rem;
+  width: 460px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label{
+  font-size: medium;
+  font-weight: 456;
+  font-style: oblique;
+  position: relative;
+}
+
+div .border{
+  border-radius: 25px;
+}
+
+footer{
+    text-align: center;
+    color: #2f3542;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 3rem;
+    margin-bottom: auto;
+}
+
+.btn{
+  color: white;
+    background: #ffbe76;
+    font-size: 1rem;
+    letter-spacing: 0.09rem;
+    padding: 1rem 0.75rem 1rem;
+    font-weight: 300;
+    margin: 1rem 0 1rem;
+}
+
+input[type="submit"]{
+  width: 100%;
+  cursor: pointer;
+}
+
+nav{
+  background: #ffbe76;
+  position: fixed;
+  height: fit-content;
+  width: 100%;
+}
+
+a{
+  color: #ffbe76;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 3rem;
+    font-weight: bold;
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #ffbe76;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+nav ul li a .nav-link{
+  background: #f1f2f6;
+}
+
+/* messages */
+.updatemsg,
+.deletemsg,
+.insertmsg {
+  position: absolute;
+  top: -40px;
+}
+
+.movedown {
+  animation: slideup 3.5s ease;
+}
+
+@keyframes slideup {
+  50% {
+      top: 0
+  }
+
+  100% {
+      top: -40px;
+  }
+}
