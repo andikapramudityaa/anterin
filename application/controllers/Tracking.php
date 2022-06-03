@@ -5,11 +5,6 @@ class Tracking extends CI_Controller
     {
         parent::__construct();
         $this->load->model("TrackingModel");
-
-        if ($this->session->userdata("login") == null) {
-            redirect(base_url('adm-login'));
-        }
-        $this->user = $this->AdminModel->findAdmin("id", $this->session->userdata("login"));
     }
 
     public function insert_data()
@@ -36,6 +31,6 @@ class Tracking extends CI_Controller
     public function report()
     {
         $data['log_tracking'] = $this->TrackingModel->getTracking();
-        $this->load->view('admin_dashboard', $data);
+        $this->load->view('admin/admin_dashboard', $data);
     }
 }

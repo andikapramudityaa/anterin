@@ -15,26 +15,26 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img src="assets/image/logo_AnterIN_2.png" height="35" alt="Anterin Logo" loading="lazy" />
-      </a>
+    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <img src="assets/image/logo_AnterIN_2.png" height="35" alt="Anterin Logo" loading="lazy" />
+    </a>
 
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="admin">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="logout">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="adm-profil">Profile</a>
-        </li>
-      </ul>
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="admin">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="adm-profil">Profile</a>
+      </li>
+    </ul>
   </nav>
   <!-- Navbar -->
   <div class="container mt-4">
     <!--Form-->
-    <form action="<?php echo base_url().'Tracking/insert_data'; ?>" method="post">
+    <form action="<?php echo base_url() . 'Tracking/insert_data'; ?>" method="post">
       <h3>Input Paket</h3>
       <div class="container-md card border-3 shadow rounded-3 my-9">
         <div class="form-group">
@@ -84,15 +84,36 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>C</td>
-          <td>D</td>
-          <td>E</td>
-          <td>F</td>
-          <td><a href="#">Edit</a> | <a href="#">Hapus</a></td>
-        </tr>
+        <?php
+          $no = 1;
+          foreach ($log_tracking as $row) : ?>
+            <tr>
+              <td>
+                <?php echo $no++ ?>
+              </td>
+              <td>
+                <?php echo $row['resi'] ?>
+              </td>
+              <td>
+                <?php echo $row['kode_servis'] ?>
+              </td>
+              <td>
+                <?php echo $row['pengirim'] ?>
+              </td>
+              <td>
+                <?php echo $row['penerima'] ?>
+              </td>
+              <td>
+                <?php echo $row['alamat_pengirim'] ?>
+              </td>
+              <td>
+                <?php echo $row['alamat_penerima'] ?>
+              </td>
+              <td>
+                <a href="#">Edit</a> | <a href="#">Hapus</a>
+              </td>
+            </tr>
+        <?php endforeach; ?>
       </tbody>
     </table>
   </div>
