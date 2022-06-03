@@ -5,12 +5,6 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->model("AdminModel");
-
-        if ($this->session->userdata("login") == null) {
-            redirect(base_url('adm-login'));
-        }
-
-        $this->admin = $this->AdminModel->findAdmin("id", $this->session->userdata("login"));
     }
 
     public function post_login()
@@ -21,7 +15,6 @@ class Auth extends CI_Controller
         if ($admin != null) {
             if (password_verify($password, $admin->password)) {
                 $this->session->set_userdata(["login" => $admin->id]);
-                $this->session->set_userdata(["admin" => true]);
                 redirect(base_url('admin'));
             } else {
                 echo "

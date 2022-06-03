@@ -21,25 +21,29 @@
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="admin">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Logout</a>
+          <a class="nav-link" href="logout">Logout</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" href="adm-profil">Profile</a>
         </li>
       </ul>
   </nav>
   <!-- Navbar -->
   <div class="container mt-4">
     <!--Form-->
-    <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+    <form action="<?php echo base_url().'Tracking/insert_data'; ?>" method="post">
       <h3>Input Paket</h3>
       <div class="container-md card border-3 shadow rounded-3 my-9">
         <div class="form-group">
           <label>No Resi</label>
-          <input type="text" name="pengirim" id="pengirim" class="form-control">
+          <input type="text" name="resi" id="resi" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Kode Servis</label>
+          <input type="text" name="kodeServis" id="kodeServis" class="form-control">
         </div>
         <div class="form-group">
           <label>Pengirim</label>
@@ -69,6 +73,7 @@
     <table class="table table-striped mt-4" id="fruit-list">
       <thead>
         <tr>
+          <th>No</th>
           <th>No Resi</th>
           <th>Pengirim</th>
           <th>Alamat Pengirim</th>

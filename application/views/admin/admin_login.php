@@ -30,6 +30,9 @@
               <div class="d-grid">
                 <button class="btn btn-primary text-uppercase fw-bold" type="submit" value="login">Login</button>
               </div>
+              <div class="reg-link">
+                <a href="adm-register">Register</a>
+              </div>
             </form>
           </div>
         </div>

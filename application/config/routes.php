@@ -56,8 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 /* URL route khusus admin */
 $route['adm-login'] = 'Admin/adminLogin';
 $route['adm-register'] = 'Admin/adminRegister';
-$route['adm-profil'] = 'Admin/adminProfil';
-$route['admin'] = 'Admin/adminDashboard';
+$route['adm-profil'] = 'Administrator/adminProfil';
+$route['admin'] = 'Administrator/adminDashboard';
 $route['auth']['post'] = 'auth/post_login';
 $route['logout'] = 'auth/logout';
 

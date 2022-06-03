@@ -17,3 +17,14 @@ div.row {
   padding: 1rem;
   padding-top: none;
 }
+
+.reg-link {
+  padding-top: 15px;
+  text-align: center;
+  font-style: none;
+}
+
+.reg-link a{
+  color: #ffbe76;
+  text-decoration: none;
+}

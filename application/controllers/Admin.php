@@ -30,9 +30,9 @@ class Admin extends CI_Controller
             );
             $this->RegAdminModel->input($data, 'admin');
             if ($admin == 'admin') {
-                redirect(base_url('admin'));
+                redirect(base_url('adm-login'));
             } else {
-                redirect(base_url('admin'));
+                redirect(base_url('adm-login'));
             }
         }
     }
@@ -45,15 +45,5 @@ class Admin extends CI_Controller
     public function adminLogin()
     {
         $this->load->view('admin/admin_login');
-    }
-
-    public function adminProfil()
-    {
-        $this->load->view('admin/admin_profil');
-    }
-
-    public function adminDashboard()
-    {
-        $this->load->view('admin/admin_dashboard');
     }
 }
