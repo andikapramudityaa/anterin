@@ -5,8 +5,6 @@ class Tracking extends CI_Controller
     {
         parent::__construct();
         $this->load->model("TrackingModel");
-
-        $data['log_tracking'] = $this->TrackingModel->getTracking();
     }
 
     public function insert_data()

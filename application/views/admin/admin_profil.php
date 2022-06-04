@@ -48,12 +48,12 @@
                     <tr>
                         <td class="satu">Admin </td>
                         <td class="batas">:</td>
-                        <td class="dua"><?= $user->id; ?></td>
+                        <td class="dua"><?= $admin->id; ?></td>
                     </tr>
                     <tr>
                         <td class="satu" valign="top">Lokasi </td>
                         <td class="batas" valign="top">:</td>
-                        <td class="dua"><?= $user->lokasi; ?></td>
+                        <td class="dua"><?= $admin->lokasi; ?></td>
                     </tr>
                 </table>
             </div>

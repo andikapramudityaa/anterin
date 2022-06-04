@@ -10,6 +10,19 @@ class TrackingModel extends CI_Model
         return $this->db->insert($this->table, $data);
     }
 
+    public function getTrackingByResi($resi)
+    {
+        return $this->db->query("SELECT * FROM $this->table WHERE resi='$resi'")->row();
+    }
+
+    public function getTrackingByResiArray($resi)
+    {
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->where('resi', $resi);
+        return $this->db->get()->result_array();
+    }
+
     public function getTracking()
     {
         $this->db->select('*');

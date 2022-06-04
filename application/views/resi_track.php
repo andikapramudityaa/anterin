@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cek Resi</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <label class="logo">アンテリン</label>
 
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="../">Home</a></li>
       <li><a href="#home">Cek Resi</a></li>
       <li><a href="#Services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -24,19 +24,49 @@
   </nav>
 
   <section class="home" id="home">
-    <div class="content">
-      <h3>Anterin Cek Resi</h3>
-      <p>Anterin Dengan Cepat Dan Aman Sampe Tangan Penerima!</p>
-      <form action="<?php echo base_url() . 'Home/trackResi'; ?>" method="post">
-        <div class="search">
-          <form>
-            <input type="text" name="resi" id="resi" placeholder="Masukan Nomor Resi" required>
-            <button type="submit" name="CheckButton">
-              Check
-            </button>
-          </form>
-        </div>
-      </form>
+    <div class="container mt-4">
+      <table>
+        <thead>
+          <tr>
+            <th>Resi</th>
+            <th>Kode Servis</th>
+            <th>Pengirim</th>
+            <th>Alamat Pengirim</th>
+            <th>Penerima</th>
+            <th>Alamat Penerima</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <?= $track->resi; ?>
+            </td>
+            <td>
+              <?= $track->kode_servis; ?>
+            </td>
+            <td>
+              <?= $track->pengirim; ?>
+            </td>
+            <td>
+              <?= $track->penerima; ?>
+            </td>
+            <td>
+              <?= $track->alamat_pengirim; ?>
+            </td>
+            <td>
+              <?= $track->alamat_penerima; ?>
+            </td>
+            <?php
+            foreach ($track_ket as $row) : ?>
+              <td>
+                <?php echo $row['ket'] ?>
+                |||||||||||
+              </td>
+            <?php endforeach; ?>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -44,13 +74,13 @@
 
     <div class="box-container">
       <div class="box">
-        <img src="assets/image/pngwing.com.png" alt="">
+        <img src="../assets/image/pngwing.com.png" alt="">
         <h3>Reguler</h3>
         <p>Estimasi 2-3 Hari Pengiriman</p>
       </div>
 
       <div class="box">
-        <img src="assets/image/pngwing.com.png" alt="">
+        <img src="../assets/image/pngwing.com.png" alt="">
         <h3>Express</h3>
         <p>Estimasi datang esok hari</p>
       </div>
