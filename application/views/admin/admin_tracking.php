@@ -36,44 +36,56 @@
   </nav>
   <!-- Navbar -->
   <div class="container mt-4">
-    <!--Form-->
-    <form action="<?php echo base_url() . 'Tracking/insert_data'; ?>" method="post">
-      <h3>Input Paket</h3>
-      <div class="container-md card border-3 shadow rounded-3 my-9">
-        <div class="form-group">
-          <label>No Resi</label>
-          <input type="text" name="resi" id="resi" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Kode Servis</label>
-          <input type="text" name="kodeServis" id="kodeServis" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Pengirim</label>
-          <input type="text" name="pengirim" id="pengirim" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Alamat Pengirim</label>
-          <input type="text" name="alamat_pengirim" id="alamat_pengirim" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Penerima</label>
-          <input type="text" name="penerima" id="penerima" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Alamat Penerima</label>
-          <input type="text" name="alamat_penerima" id="alamat_penerima" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Keterangan</label>
-          <input type="text" name="ket" id="ket" class="form-control">
-        </div>
-        <div>
-          <input type="submit" value="Submit" class="btn btn-block">
-        </div>
-    </form>
+    <table class="table table-striped mt-4" id="fruit-list">
+      <thead>
+        <tr>
+          <th>No Input</th>
+          <th>No Resi</th>
+          <th>Kode Servis</th>
+          <th>Pengirim</th>
+          <th>Alamat Pengirim</th>
+          <th>Penerima</th>
+          <th>Alamat Penerima</th>
+          <th>Keterangan</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        foreach ($log_tracking as $row) : ?>
+          <tr>
+            <td>
+              <?php echo $row['no_input'] ?>
+            </td>
+            <td>
+              <?php echo $row['resi'] ?>
+            </td>
+            <td>
+              <?php echo $row['kode_servis'] ?>
+            </td>
+            <td>
+              <?php echo $row['pengirim'] ?>
+            </td>
+            <td>
+              <?php echo $row['penerima'] ?>
+            </td>
+            <td>
+              <?php echo $row['alamat_pengirim'] ?>
+            </td>
+            <td>
+              <?php echo $row['alamat_penerima'] ?>
+            </td>
+            <td>
+              <?php echo $row['ket'] ?>
+            </td>
+            <td>
+              <a href="adm-edit">Edit</a> | <a href="<?= base_url(); ?>adm-deltrack/<?= $row['no_input']; ?>">Hapus</a>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
   </div>
-
   <script src="assets/js/main.js"></script>
   </div>
   <footer>

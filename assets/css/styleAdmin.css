@@ -102,3 +102,7 @@ table {
   text-align: center;
   border: 1px solid;
 }
+
+table a, a:hover{
+  text-decoration: none;
+}

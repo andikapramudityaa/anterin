@@ -9,4 +9,9 @@ class AdminModel extends CI_Model
     {
         return $this->db->get_where($this->table, [$col => $val])->row();
     }
+
+    public function findAllByAdmin($id)
+    {
+        return $this->db->query("SELECT * FROM administrator WHERE id='$id'")->row();
+    }
 }

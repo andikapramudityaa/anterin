@@ -14,7 +14,13 @@ class Administrator extends CI_Controller
 
     public function adminProfil()
     {
-        $this->load->view('admin/admin_profil');
+        $data = [
+            "user" => $this->user,
+            "user" => $this->AdminModel->findAllByAdmin($this->user->id),
+            "error" => " "
+            ];
+
+        $this->load->view('admin/admin_profil', $data);
     }
 
     public function adminDashboard()

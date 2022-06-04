@@ -5,7 +5,7 @@ class TrackingModel extends CI_Model
 {
     private $table = "log_tracking";
 
-    public function input($data, $table)
+    public function input($data)
     {
         return $this->db->insert($this->table, $data);
     }
@@ -13,8 +13,18 @@ class TrackingModel extends CI_Model
     public function getTracking()
     {
         $this->db->select('*');
-        $this->db->from('log_tracking');
+        $this->db->from($this->table);
         $this->db->order_by("resi", "ASC");
         return $this->db->get()->result_array();
+    }
+
+    public function delete($no_input)
+    {
+        return $this->db->delete($this->table, array('no_input' => $no_input));
+    }
+
+    public function update($data, $no_input)
+    {
+        return $this->db->update($this->table, $data, array('no_input' => $no_input));
     }
 }

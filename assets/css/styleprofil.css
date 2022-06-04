@@ -1,64 +1,56 @@
 .konten {
-  padding-top: 80px;
+	padding-top: 80px;
 }
 .profil {
-  width: 100%;
-  grid-template-columns: 50% 50%;
-  display: grid;
-  padding-left: 10px;
-  padding-right: 10px;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .subtitle {
-  font-size: 32px;
-  text-decoration: underline;
-  color: #ffbe76;
-  margin: 10px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	font-size: 32px;
+	color: #000;
+	margin: 10px;
 }
-.kiri {
-  background-color: rgb(240, 195, 112);
-  border-color: lightyellow;
-  border-style: double;
-  border-radius: 10px;
-  padding-top: 10px;
+.isi {
+	padding: 35px 0px 35px 20px;
+	background-color: rgb(240, 195, 112);
+	border-radius: 20px;
+	width: 50%;
+	margin-left: 25%;
 }
-.kiri img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 240px;
-  width: 320px;
-  border-style: double;
-  border: 2px solid white;
+.isi img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 240px;
+	width: 320px;
 }
 
-.kiri h3 {
-  text-align: center;
-  color: white;
+.isi h3 {
+	text-align: center;
+	color: white;
 }
-.kanan {
-  margin-left: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
-  background-color: rgb(240, 195, 112);
-  border-color: lightyellow;
-  border-style: double;
-  border-radius: 10px;
-  font-family: Arial;
-}
+
 tr {
-  font-size: 26px;
-  margin: 10px;
-  color: aliceblue;
+	font-size: 26px;
+	margin: 10px;
+	color: aliceblue;
 }
 
-.kanan .satu {
-  width: 200px;
+.isi .satu {
+	width: 100px;
 }
 
-.kanan .batas {
-  padding: 0px 10px;
+.isi .batas {
+	padding: 0px 10px;
 }
 
-.kanan .dua {
-  width: 500px;
+.isi .dua {
+	width: 500px;
+}
+
+table {
+	margin-left: 33%;
 }

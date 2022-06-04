@@ -58,6 +58,9 @@ $route['adm-login'] = 'Admin/adminLogin';
 $route['adm-register'] = 'Admin/adminRegister';
 $route['adm-profil'] = 'Administrator/adminProfil';
 $route['admin'] = 'Administrator/adminDashboard';
+$route['adm-tracking'] = 'Tracking/report';
+$route['adm-edit'] = 'Tracking/edit';
+$route['adm-deltrack/(:num)'] = 'Tracking/del_track/$1';
 $route['auth']['post'] = 'auth/post_login';
 $route['logout'] = 'auth/logout';
 
