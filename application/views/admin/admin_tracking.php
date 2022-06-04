@@ -88,11 +88,6 @@
   </div>
   <script src="assets/js/main.js"></script>
   </div>
-  <footer>
-    <label class="copywrite">
-      Anterin &copy;2022
-    </label>
-  </footer>
 </body>
 
 </html>
