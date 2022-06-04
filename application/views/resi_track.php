@@ -57,13 +57,16 @@
             <td>
               <?= $track->alamat_penerima; ?>
             </td>
-            <?php
-            foreach ($track_ket as $row) : ?>
-              <td>
-                <?php echo $row['ket'] ?>
+            
+              <td align="center">
+              <?php foreach ($track_ket as $row) : ?>
+                <?php echo $row['ket']  ?>
+                <?php echo "<br>"; ?>
                 |||||||||||
+                <?php echo "<br>"; ?>
+                <?php endforeach; ?>
               </td>
-            <?php endforeach; ?>
+            
           </tr>
         </tbody>
       </table>
