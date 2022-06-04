@@ -36,7 +36,7 @@
   </nav>
   <!-- Navbar -->
   <div class="container mt-4">
-    <table class="table table-striped mt-4" id="fruit-list">
+    <table class="table table-bordered" id="fruit-list">
       <thead>
         <tr>
           <th>No Input</th>
@@ -79,7 +79,7 @@
               <?php echo $row['ket'] ?>
             </td>
             <td>
-              <a href="adm-edit">Edit</a> | <a href="<?= base_url(); ?>adm-deltrack/<?= $row['no_input']; ?>">Hapus</a>
+              <a href="adm-edit/<?= $row["no_input"]; ?>">Edit</a> | <a href="<?= base_url(); ?>adm-deltrack/<?= $row['no_input']; ?>">Hapus</a>
             </td>
           </tr>
         <?php endforeach; ?>

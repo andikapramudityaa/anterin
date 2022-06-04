@@ -5,6 +5,9 @@ class Tracking extends CI_Controller
     {
         parent::__construct();
         $this->load->model("TrackingModel");
+
+        $data['log_tracking'] = $this->TrackingModel->getTracking();
+        $this->admin = $this->TrackingModel->getTracking();
     }
 
     public function insert_data()
@@ -56,7 +59,7 @@ class Tracking extends CI_Controller
             echo "
                 <script>
                 alert('Data berhasil diubah');
-                window.history.go(-1);
+                window.history.go(-2);
                 </script>";
         } else {
             echo "
@@ -73,9 +76,15 @@ class Tracking extends CI_Controller
         $this->load->view('admin/admin_tracking', $data);
     }
 
-    public function edit()
+    public function edit($no_input)
     {
-        $this->load->view('admin/admin_edit');
+        $data = [
+            "admin" => $this->admin,
+            "admin" => $this->TrackingModel->change($no_input),
+            "error" => " "
+            ];
+
+        $this->load->view('admin/admin_edit', $data);
     }
 
     public function del_track($no_input)

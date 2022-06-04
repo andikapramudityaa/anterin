@@ -31,6 +31,11 @@ class TrackingModel extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    public function change($no_input)
+    {
+        return $this->db->query("SELECT * FROM log_tracking WHERE no_input='$no_input'")->row();
+    }
+
     public function delete($no_input)
     {
         return $this->db->delete($this->table, array('no_input' => $no_input));
