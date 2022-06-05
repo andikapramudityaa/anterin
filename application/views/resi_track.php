@@ -23,61 +23,7 @@
     </ul>
   </nav>
 
-<<<<<<< HEAD
   <section class="features">
-=======
-  <section class="home" id="home">
-    <div class="container mt-4">
-      <table>
-        <thead>
-          <tr>
-            <th>Resi</th>
-            <th>Kode Servis</th>
-            <th>Pengirim</th>
-            <th>Alamat Pengirim</th>
-            <th>Penerima</th>
-            <th>Alamat Penerima</th>
-            <th>Keterangan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <?= $track->resi; ?>
-            </td>
-            <td>
-              <?= $track->kode_servis; ?>
-            </td>
-            <td>
-              <?= $track->pengirim; ?>
-            </td>
-            <td>
-              <?= $track->penerima; ?>
-            </td>
-            <td>
-              <?= $track->alamat_pengirim; ?>
-            </td>
-            <td>
-              <?= $track->alamat_penerima; ?>
-            </td>
-            
-              <td align="center">
-              <?php foreach ($track_ket as $row) : ?>
-                <?php echo $row['ket']  ?>
-                <?php echo "<br>"; ?>
-                |||||||||||
-                <?php echo "<br>"; ?>
-                <?php endforeach; ?>
-              </td>
-            
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="features" id="Services">
->>>>>>> 3acae795f98c6f9be7a2b1ac34f82a412a50e867
 
     <div class="box-container">
       <div class="box">
