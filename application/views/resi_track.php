@@ -17,72 +17,38 @@
 
     <ul>
       <li><a href="../">Home</a></li>
-      <li><a href="#home">Cek Resi</a></li>
-      <li><a href="#Services">Services</a></li>
+      <li><a href="../">Cek Resi</a></li>
+      <li><a href="../#Services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="home" id="home">
-    <div class="container mt-4">
-      <table>
-        <thead>
-          <tr>
-            <th>Resi</th>
-            <th>Kode Servis</th>
-            <th>Pengirim</th>
-            <th>Alamat Pengirim</th>
-            <th>Penerima</th>
-            <th>Alamat Penerima</th>
-            <th>Keterangan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <?= $track->resi; ?>
-            </td>
-            <td>
-              <?= $track->kode_servis; ?>
-            </td>
-            <td>
-              <?= $track->pengirim; ?>
-            </td>
-            <td>
-              <?= $track->penerima; ?>
-            </td>
-            <td>
-              <?= $track->alamat_pengirim; ?>
-            </td>
-            <td>
-              <?= $track->alamat_penerima; ?>
-            </td>
-            <?php
-            foreach ($track_ket as $row) : ?>
-              <td>
-                <?php echo $row['ket'] ?>
-                |||||||||||
-              </td>
-            <?php endforeach; ?>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="features" id="Services">
+  <section class="features">
 
     <div class="box-container">
       <div class="box">
-        <img src="../assets/image/pngwing.com.png" alt="">
-        <h3>Reguler</h3>
-        <p>Estimasi 2-3 Hari Pengiriman</p>
+        <h4>Nomor Resi</h4>
+        <p><?= $track->resi; ?></p>
+        <h4>Pengirim</h4>
+        <p><?= $track->pengirim; ?></p>
+        <h4>Penerima</h4>
+        <p><?= $track->penerima; ?></p>
+        <h4>Alamat Pengirim</h4>
+        <p><?= $track->alamat_pengirim; ?></p>
+        <h4>Alamat Penerima</h4>
+        <p><?= $track->alamat_penerima; ?></p>
       </div>
 
       <div class="box">
-        <img src="../assets/image/pngwing.com.png" alt="">
-        <h3>Express</h3>
-        <p>Estimasi datang esok hari</p>
+        <h4>Lacak</h4> <br>
+        <?php foreach ($track_ket as $row) : ?>
+          <?php echo $row['ket']  ?>
+          <?php echo "<br>"; ?>
+          |
+          <?php echo "<br>"; ?>
+          |
+          <?php echo "<br>"; ?>
+        <?php endforeach; ?>
       </div>
     </div>
 

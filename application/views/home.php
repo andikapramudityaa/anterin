@@ -27,7 +27,7 @@
     <div class="content">
       <h3>Anterin Cek Resi</h3>
       <p>Anterin Dengan Cepat Dan Aman Sampe Tangan Penerima!</p>
-      <form action="<?php echo base_url() . 'Home/trackResi'; ?>" method="post">
+      <form action="<?php echo base_url() . 'Tracking/trackResi'; ?>" method="post">
         <div class="search">
           <form>
             <input type="text" name="resi" id="resi" placeholder="Masukan Nomor Resi" required>

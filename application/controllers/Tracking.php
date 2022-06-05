@@ -103,4 +103,23 @@ class Tracking extends CI_Controller
             window.history.go(-1);
             </script>";
     }
+
+    public function trackResi()
+    {
+        $resi = $this->input->post("resi");
+        if ($this->TrackingModel->getTrackingByResi($resi) == null) {
+            echo "
+                <script>
+                alert('No Resi tidak ditemukan');
+                window.history.go(-1);
+                </script>";
+        } else {
+            $data = [
+                "track" => $this->TrackingModel->getTrackingByResi($resi),
+                "track_ket" => $this->TrackingModel->getTrackingByResiArray($resi),
+            ];
+
+            $this->load->view('resi_track', $data);
+        }
+    }
 }
